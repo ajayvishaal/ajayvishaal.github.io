@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, height=100%, initial-scale=1.0;">
+<style>
+* {
+    box-sizing: border-box;
+}
+head{
+  background-color:blue;
+  color:red;
+}
+h1{text-align:center;}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 17px;
+	width: 100%;
+	height:100%;
+	position: fixed;
+}
+
+#myVideo {
+    
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+
+}
+
+#myBtn {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+#myBtn:hover {
+    background: #ddd;
+    color: black;
+}
+img {
+    float: right;
+}
+</style>
+</head>
+<body>
+
+<video autoplay loop id="myVideo">
+  <source src="BarnsCourtney-GlitterGoldcompressed.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>C B Ajay Vishaal</h1>
+  <p><img src="WhatsAppImage2018-08-29at7.34.49PM.jpeg" alt="Pineapple" style="width:150px;height:190px;margin-left:15px;">
+
+I'm currently pursuing my UG at SRMIST, Chennai. Though not bright in academics, I feel I've got a lot of potential. I never shy away from a challenging problem or a puzzle. I just love solving them. The best problem solved by me till date is a payment dispute between my parents and our tenant. Apart from that, I have not faced any real-world problems(I'm just 21!!) barring a few challenging puzzles. Other than solving problems, I love watching movies and TV series. MCU has been my life for the past 7 years, and GOT is my favourite series yet. Ask me anything from these two, I'm  damn sure that I'd do great. A foodie by birth, love trying out various dishes existing on earth. Friends are my stronghold, would do anything for them and they would do the same for me. Being a final year student and not really technically sound, I'm looking for an oppurtunity in an organisation which will guide me into the field of computer science , and kickstart my career.</p>
+  <button id="myBtn" onclick="myFunction()" >Play</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+</script>
+
+</body>
+</html>
